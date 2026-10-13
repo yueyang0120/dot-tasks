@@ -1,0 +1,23 @@
+name: Verify template
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm run setup
+      - run: npm test
+      - run: npm run test:setup
+      - run: npm run typecheck
+      - run: npm run check:release
+      - run: npm run setup -- --empty

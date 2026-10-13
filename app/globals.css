@@ -1,0 +1,5 @@
+/* Keep this first line if the existing project already uses Tailwind 4 elsewhere. */
+@import "tailwindcss";
+
+html, body { margin: 0; height: 100%; background: #fff; }
+body { color: #0E0F0C; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif; -webkit-font-smoothing: antialiased; overscroll-behavior-y: none; }
