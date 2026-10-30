@@ -10,7 +10,35 @@
 
 自主执行由你的 DOT 提供。这个 repo 提供任务数据、接口、界面和协作规则。只启动网页不会自动启动 DOT；后台推进需要真实连接和云端定时任务。
 
-## 两条命令体验
+## 把链接发给 Dot，让它帮你装
+
+在有 Sites 的 Dot、Codex 或 ChatGPT Work 对话里，复制这段：
+
+```text
+请从 https://github.com/yueyang0120/dot-tasks 给我安装 DOT Tasks。
+先读 SETUP.md，按里面的步骤完成部署、连接和验收。
+需要我登录或授权时再叫我。
+```
+
+具体步骤在 [安装说明](SETUP.md)。每个人安装自己的一份私密实例；你的账号需要能使用 Sites 和 DOT，安装时会检查连接与后台任务。
+
+## 一条命令看演示
+
+Mac / Linux 装好 **Git 和 Node.js 22.13+** 后，在终端运行：
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/yueyang0120/dot-tasks/main/install.sh | bash
+```
+
+脚本会下载到 `~/dot-tasks`，安装依赖、构建、初始化本地数据库，再启动演示。打开 `http://localhost:5173/?demo=1`，按 Ctrl+C 停止。也可以先看[脚本内容](install.sh)。
+
+演示用虚构数据，不会连接你的 DOT。要装自己的实例，把上面的安装指令发给 Dot。重复运行会复用同一个 repo，保留数据，不拉取或覆盖源码。想换目录或端口：
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/yueyang0120/dot-tasks/main/install.sh | bash -s -- --dir "$HOME/dot-tasks-demo" --port 5174
+```
+
+### 下载 ZIP 或使用 Windows
 
 装好 Node.js 22.13 或更新版本，下载源码 ZIP，在解压目录打开终端：
 
@@ -22,6 +50,8 @@ npm run dev
 打开打印的 `http://localhost:5173/?demo=1`。演示使用虚构数据，刷新恢复初始样例，不保存、不发送，也没有连接 DOT。
 
 安装脚本安装锁定依赖、构建程序、初始化本地数据库。重复运行保留已有数据，不注册站点、不连接外部账号、不创建定时任务。
+
+Bash 安装脚本还支持 `--no-start`（只安装）和 `--empty`（使用空白持久数据）。
 
 要用空白的本地持久数据：
 

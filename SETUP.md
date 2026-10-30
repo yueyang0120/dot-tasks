@@ -1,6 +1,18 @@
-# Install with Codex or ChatGPT Work
+# Install DOT Tasks
 
-Open or attach this repository first. Then paste:
+## Copy into your agent chat
+
+```text
+请从 https://github.com/yueyang0120/dot-tasks 给我安装 DOT Tasks。
+先读 SETUP.md，按里面的步骤完成部署、连接和验收。
+需要我登录或授权时再叫我。
+```
+
+Use a chat with Sites and your own DOT available. The agent should read the repository before running installation steps. If the chat cannot read GitHub, attach the source ZIP. For a local demo only, use the one-command installer in [README](README.md#one-command-local-demo).
+
+## Agent installation instructions
+
+Obtain a clean copy of this repository in a new directory, then follow these instructions. Preserve existing installations and their data.
 
 ```text
 Install DOT Tasks from this repository for me.

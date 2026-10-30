@@ -14,7 +14,35 @@ DOT Tasks gives your DOT a persistent task list you can see and edit on your pho
 
 The app stores and displays work. Your DOT provides reasoning and execution. Background progress needs a connected DOT and a verified cloud schedule; starting the web app alone does not start an agent.
 
-## Try it locally
+## Install with your DOT
+
+Copy this into your DOT, Codex or ChatGPT Work chat with Sites available:
+
+```text
+Install DOT Tasks for me from https://github.com/yueyang0120/dot-tasks.
+Read SETUP.md and follow its deployment, connection and verification steps.
+Ask me when you need me to sign in or authorize a connection.
+```
+
+Your agent handles setup using the [installation guide](SETUP.md). Each person gets a separate private instance. Your account needs Sites and DOT access; the connection and background schedule are verified during setup.
+
+## One-command local demo
+
+On macOS or Linux with **Git and Node.js 22.13+** installed:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/yueyang0120/dot-tasks/main/install.sh | bash
+```
+
+This downloads the source into `~/dot-tasks`, installs locked dependencies, builds, migrates the local database and starts the demo. Open `http://localhost:5173/?demo=1`. Ctrl+C stops the server. You can [read the script](install.sh) before running it.
+
+The demo uses fictional data and does not connect your DOT. For your own connected instance, use the prompt above. Existing matching checkouts are reused without pulling or overwriting source; local data is preserved. A different folder or port:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/yueyang0120/dot-tasks/main/install.sh | bash -s -- --dir "$HOME/dot-tasks-demo" --port 5174
+```
+
+### ZIP download or Windows
 
 Install **Node.js 22.13+**. Download the repository ZIP and open a terminal inside the extracted folder:
 
@@ -25,7 +53,7 @@ npm run dev
 
 Open the printed `http://localhost:5173/?demo=1` URL. The demo uses fictional, temporary data; refresh resets it. Nothing is sent and no account or schedule is connected.
 
-If you prefer Git, clone this repository and enter its folder before those two commands.
+If you prefer Git, clone this repository and enter its folder before those two commands. The Bash installer also accepts `--no-start` and `--empty`.
 
 `setup` installs locked dependencies, builds the Worker and applies **local** database migrations. It preserves existing task data and remembers the selected mode. It does not publish a Site, authenticate external accounts or create scheduled work.
 

@@ -16,7 +16,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "check:release": "node scripts/check-release.mjs",
-    "test:setup": "node --test tests/setup.test.mjs"
+    "test:setup": "node --test tests/setup.test.mjs tests/install.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
