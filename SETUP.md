@@ -3,9 +3,7 @@
 ## Copy into your agent chat
 
 ```text
-请从 https://github.com/yueyang0120/dot-tasks 给我安装 DOT Tasks。
-先读 SETUP.md，按里面的步骤完成部署、连接和验收。
-需要我登录或授权时再叫我。
+帮我安装这个工作台：https://github.com/yueyang0120/dot-tasks。按 README 完成安装，需要我操作时再叫我。
 ```
 
 Use a chat with Sites and your own DOT available. The agent should read the repository before running installation steps. If the chat cannot read GitHub, attach the source ZIP. For a local demo only, use the one-command installer in [README](README.md#one-command-local-demo).

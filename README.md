@@ -19,9 +19,7 @@ The app stores and displays work. Your DOT provides reasoning and execution. Bac
 Copy this into your DOT, Codex or ChatGPT Work chat with Sites available:
 
 ```text
-Install DOT Tasks for me from https://github.com/yueyang0120/dot-tasks.
-Read SETUP.md and follow its deployment, connection and verification steps.
-Ask me when you need me to sign in or authorize a connection.
+Install this workspace for me: https://github.com/yueyang0120/dot-tasks. Follow the README and ask me when you need me to take an action.
 ```
 
 Your agent handles setup using the [installation guide](SETUP.md). Each person gets a separate private instance. Your account needs Sites and DOT access; the connection and background schedule are verified during setup.

@@ -15,9 +15,7 @@
 在有 Sites 的 Dot、Codex 或 ChatGPT Work 对话里，复制这段：
 
 ```text
-请从 https://github.com/yueyang0120/dot-tasks 给我安装 DOT Tasks。
-先读 SETUP.md，按里面的步骤完成部署、连接和验收。
-需要我登录或授权时再叫我。
+帮我安装这个工作台：https://github.com/yueyang0120/dot-tasks。按 README 完成安装，需要我操作时再叫我。
 ```
 
 具体步骤在 [安装说明](SETUP.md)。每个人安装自己的一份私密实例；你的账号需要能使用 Sites 和 DOT，安装时会检查连接与后台任务。
